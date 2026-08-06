@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/common/Footer";
 import Navbar from "@/components/ui/common/Navbar";
 
 export const metadata = {
@@ -11,6 +12,7 @@ export default function FrontLayout({ children }) {
     <body>
       <Navbar />
       {children}
+      <Footer/>
     </body>
   );
 }
