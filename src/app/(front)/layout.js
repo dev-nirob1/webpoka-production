@@ -1,5 +1,5 @@
-import Footer from "@/components/ui/common/Footer";
-import Navbar from "@/components/ui/common/Navbar";
+import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
 
 export const metadata = {
   title: "Webpoka | A Software Development Agency",

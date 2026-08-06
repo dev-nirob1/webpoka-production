@@ -1,3 +1,4 @@
+import Hero from "@/components/section/Hero";
 import {
   Accordion,
   Button,
@@ -15,6 +16,7 @@ import {
 export default function Home() {
   return (
     <div>
+      <Hero/>
       <Paragraph>
         this is paragraph writing a website of software company
       </Paragraph>

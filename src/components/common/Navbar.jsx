@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { FaBars, FaXmark } from "react-icons/fa6";
-import Container from "../Container";
+import Container from "../ui/Container";
 
 const navLinks = [
   { href: "/", label: "Home" },

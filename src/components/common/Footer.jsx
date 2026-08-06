@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaYoutube, FaWhatsapp } from "react-icons/fa6";
-import Container from "../Container";
-import Heading from "../Heading";
+import Container from "../ui/Container";
+import Heading from "../ui/Heading";
 
 const supportLinks = [
   { href: "/", label: "Home" },
