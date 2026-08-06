@@ -1,15 +1,90 @@
+/* ============================================================
+   1. Tailwind Import
+   ============================================================ */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   2. Font Setup (Google Fonts loaded via layout.js or <link>)
+   ============================================================ */
+/* @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Quicksand:wght@300..700&display=swap"); */
+
+/* ============================================================
+   3. Theme Tokens
+   ============================================================ */
+@theme {
+  /* Brand Colors */
+  --color-primary: #2200bd;
+  --color-secondary: #007bff;
+  --color-accent: #ff9600;
+  --color-alternative: #ed1c24;
+  --color-highlight: #e83e8c;
+
+  /* Neutral Colors */
+  --color-dark: #222222;
+  --color-light: #6c757d;
+  --color-border: #dee2e6;
+
+  /* Typography */
+  --font-body: "Cabin", sans-serif;
+  --font-heading: "Quicksand", sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   4. CSS Variables (runtime, non-Tailwind)
+   ============================================================ */
+:root {
+  --background: #ffffff;
+  --foreground: #222222;
+
+  /* Heading Sizes — base (mobile) */
+  --heading-1: 2rem;
+  --heading-2: 1.75rem;
+  --heading-3: 1.5rem;
+  --heading-4: 1.375rem;
+  --heading-5: 1.25rem;
+}
+
+@media (min-width: 576px) {
+  :root {
+    --heading-1: 2rem;
+    --heading-2: 1.75rem;
+    --heading-3: 1.5rem;
+    --heading-4: 1.375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --heading-1: 2.25rem;
+    --heading-2: 2rem;
+    --heading-3: 1.75rem;
+    --heading-4: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --heading-1: 3rem;
+    --heading-2: 2.25rem;
+    --heading-3: 2rem;
+    --heading-4: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --heading-2: 2.5rem;
+    --heading-3: 2.25rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --heading-1: 3rem;
+    --heading-2: 2.75rem;
+    --heading-3: 2.5rem;
+    --heading-4: 2.25rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +94,67 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* ============================================================
+   6. Global Animations
+   ============================================================ */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
