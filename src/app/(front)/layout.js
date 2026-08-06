@@ -1,3 +1,5 @@
+import Navbar from "@/components/ui/common/Navbar";
+
 export const metadata = {
   title: "Webpoka | A Software Development Agency",
   description:
@@ -5,5 +7,10 @@ export const metadata = {
 };
 
 export default function FrontLayout({ children }) {
-  return <body className="min-h-full flex flex-col">{children}</body>;
+  return (
+    <body>
+      <Navbar />
+      {children}
+    </body>
+  );
 }
