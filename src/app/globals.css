@@ -25,14 +25,17 @@
   --color-border: #dee2e6;
 
   /* Typography */
-  --font-body: "Cabin", sans-serif;
-  --font-heading: "Quicksand", sans-serif;
+  --font-body: var(--body-font, "Cabin", sans-serif);
+  --font-heading: var(--heading-font, "Quicksand", serif);
 }
 
 /* ============================================================
    4. CSS Variables (runtime, non-Tailwind)
    ============================================================ */
 :root {
+  --body-font: "Cabin", sans-serif;
+  --heading-font: "Quicksand", serif;
+
   --background: #ffffff;
   --foreground: #222222;
 
