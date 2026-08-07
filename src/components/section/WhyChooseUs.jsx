@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Heading, Paragraph, Section, Container, ListItem, Button } from "../ui";
+import {
+  Heading,
+  Paragraph,
+  Section,
+  Container,
+  ListItem,
+  Button,
+} from "../ui";
 import SectionTitle from "../ui/SectionTitle";
 import BenefitCard from "../widget/BenifitCard";
 // import SectionTitle from "../widget/SectionTitle";
@@ -55,16 +62,18 @@ const WhyChooseUs = () => {
             </ul>
 
             <Button variant={"secondary"}>
-                <Link href="/contact">
-              Get Consultation
-            </Link>
+              <Link href="/contact">Get Consultation</Link>
             </Button>
           </div>
 
           {/* cards */}
           <div className="flex flex-col gap-8">
             {benefits.map((benefit, index) => (
-              <BenefitCard key={benefit.title} index={index} benefit={benefit} />
+              <BenefitCard
+                key={benefit.title}
+                index={index}
+                benefit={benefit}
+              />
             ))}
           </div>
         </div>
