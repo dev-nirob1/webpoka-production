@@ -2,6 +2,7 @@ import Hero from "@/components/section/Hero";
 import Services from "@/components/section/Services";
 import Video from "@/components/section/Video";
 import WhyChooseUs from "@/components/section/WhyChooseUs";
+import WorkingProcess from "@/components/section/WorkingProcess";
 import {
   Accordion,
   Button,
@@ -23,6 +24,7 @@ export default function Home() {
       <Services/>
       <WhyChooseUs/>
       <Video/>
+      <WorkingProcess/>
       <Paragraph>
         this is paragraph writing a website of software company
       </Paragraph>
