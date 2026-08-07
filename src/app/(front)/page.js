@@ -1,4 +1,5 @@
 import Hero from "@/components/section/Hero";
+import Services from "@/components/section/Services";
 import {
   Accordion,
   Button,
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <div>
       <Hero/>
+      <Services/>
       <Paragraph>
         this is paragraph writing a website of software company
       </Paragraph>
