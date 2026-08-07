@@ -1,6 +1,6 @@
 import { Cabin, Quicksand } from "next/font/google";
 import "./globals.css";
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 const cabin = Cabin({
   variable: "--body-font",
   subsets: ["latin"],

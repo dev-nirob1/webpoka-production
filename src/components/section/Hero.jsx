@@ -13,15 +13,21 @@ const Hero = () => {
               A Software <br />
               Development Agency
             </Heading>
-            <Paragraph className="md:text-[1.1rem] md:font-semibold my-4 text-white">
-              We build modern web, mobile, and cloud applications for
-              businesses and startups across the globe.
+            <Paragraph className="md:text-[1.1rem] md:font-semibold mt-5 mb-6 text-white leading-8">
+              We build modern web, mobile, and cloud applications for businesses
+              and startups across the globe.
             </Paragraph>
-            <Button className="my-2 px-6">Watch Video <FaArrowRight /></Button>
+            <Button
+              variant="primary"
+              icon="fas fa-arrow-right"
+              className="my-2"
+            >
+              Watch Video
+            </Button>
           </div>
 
           {/* Hero image */}
-          <div className="w-full h-full md:absolute md:top-8 md:right-0 md:bottom-0 md:flex md:w-1/2 md:h-full md:items-center md:justify-center">
+          <div className="w-auto h-full md:absolute md:top-8 md:right-0 md:bottom-0 md:flex md:w-1/2 md:h-full md:items-center md:justify-center">
             <Image
               src="/images/foreground/hero.png"
               alt="image"

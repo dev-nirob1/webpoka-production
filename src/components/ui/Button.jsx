@@ -2,68 +2,27 @@
 
 import { cn } from "./cn";
 
-/**
- * Button component
- *
- * Supports:
- * - Normal button:        <Button>Click Me</Button>
- * - Text + Icon:          <Button icon={<ArrowRight />}>Learn More</Button>
- * - Circle icon button:   <Button shape="circle"><ArrowRight /></Button>
- *
- * @param {Object}    props
- * @param {React.ReactNode} props.children
- * @param {React.ReactNode} [props.icon]       - Icon rendered after the label
- * @param {"default"|"circle"} [props.shape]  - "circle" renders a round icon-only button
- * @param {string}    [props.className]        - Extra Tailwind classes (merged safely)
- * @param {string}    [props.type]             - button | submit | reset
- * @param {boolean}   [props.disabled]
- */
-export default function Button({
-  children,
-  icon,
-  shape = "default",
-  className,
-  type = "button",
-  disabled = false,
-  ...props
-}) {
-  const isCircle = shape === "circle";
-
+const Button = ({ children, icon, variant = "primary", className, ...props }) => {
   return (
     <button
-      type={type}
-      disabled={disabled}
       className={cn(
-        // Base
-        "inline-flex items-center justify-center font-body font-semibold",
-        "cursor-pointer select-none outline-none",
-        "transition-all duration-200 ease-in-out",
-        // Focus ring
-        "focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
-        // Disabled
-        "disabled:opacity-50 disabled:cursor-not-allowed",
-
-        // Shape variants
-        isCircle
-          ? [
-              "rounded-full p-3",
-              "bg-primary text-white",
-              "hover:bg-secondary hover:scale-105 active:scale-95",
-            ]
-          : [
-              "rounded-lg px-6 py-3 gap-2 text-sm",
-              "bg-primary text-white",
-              "hover:bg-secondary active:scale-95",
-            ],
-
+        "relative inline-block overflow-hidden text-center font-bold leading-none transition-all duration-300 ease-in-out flex items-center justify-between",
+        variant === "primary" &&
+          "rounded-full py-3 pl-8 pr-20 text-[1.1rem] text-white bg-gradient-to-r from-primary to-secondary hover:bg-gradient-to-l",
+        variant === "secondary" && "", // TODO: boilerplate
+        variant === "circle" && "", // TODO: boilerplate
         className
       )}
       {...props}
     >
       {children}
-      {icon && !isCircle && (
-        <span className="inline-flex items-center">{icon}</span>
+      {icon && variant === "primary" && (
+        <span className="absolute right-0 top-0 flex h-full w-14 items-center justify-center rounded-full bg-white text-dark">
+          <i className={cn(icon, "text-lg")} />
+        </span>
       )}
     </button>
   );
-}
+};
+
+export default Button;
