@@ -27,6 +27,10 @@
   /* Typography */
   --font-body: var(--body-font, "Cabin", sans-serif);
   --font-heading: var(--heading-font, "Quicksand", serif);
+
+  --animate-spin-slow: spin 5s linear infinite;
+  --animate-float-up-down: float-up-down 5s linear infinite;
+  --animate-float-left-right: float-left-right 5s linear infinite;
 }
 
 /* ============================================================
@@ -120,44 +124,41 @@ video {
 /* ============================================================
    6. Global Animations
    ============================================================ */
-@keyframes fade-in {
+
+@keyframes spin {
   from {
-    opacity: 0;
-    transform: translateY(8px);
+    transform: rotate(0deg);
   }
+
   to {
-    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float-up-down {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-30px);
+  }
+
+  100% {
     transform: translateY(0);
   }
 }
 
-@keyframes slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-12px);
-  }
-  to {
-    opacity: 1;
+@keyframes float-left-right {
+  0% {
     transform: translateX(0);
   }
-}
 
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 0.6;
+  50% {
+    transform: translateX(-30px);
   }
+
   100% {
-    transform: scale(2.5);
-    opacity: 0;
-  }
-}
-
-@keyframes spin-slow {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+    transform: translateX(0);
   }
 }
