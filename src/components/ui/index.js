@@ -3,6 +3,7 @@ export { default as Heading } from "./Heading";
 export { default as Paragraph } from "./Paragraph";
 export { default as Label } from "./Label";
 export { default as Link } from "./Link";
+export { default as ListItem } from "./ListItem.jsx";
 
 // Actions
 export { default as Button } from "./Button";

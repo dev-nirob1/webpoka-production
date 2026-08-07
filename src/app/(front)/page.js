@@ -1,5 +1,6 @@
 import Hero from "@/components/section/Hero";
 import Services from "@/components/section/Services";
+import WhyChooseUs from "@/components/section/WhyChooseUs";
 import {
   Accordion,
   Button,
@@ -19,6 +20,7 @@ export default function Home() {
     <div>
       <Hero/>
       <Services/>
+      <WhyChooseUs/>
       <Paragraph>
         this is paragraph writing a website of software company
       </Paragraph>
