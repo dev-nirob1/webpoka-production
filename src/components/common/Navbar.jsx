@@ -9,10 +9,10 @@ import Container from "../ui/Container";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/about-us", label: "About" },
+  { href: "/about", label: "About" },
   { href: "/projects", label: "Projects" },
   { href: "/blogs", label: "Blogs" },
-  { href: "/contact-us", label: "Contact" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Navbar = () => {

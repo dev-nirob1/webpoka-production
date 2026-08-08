@@ -16,7 +16,7 @@ const MemberCard = ({ memberData }) => {
 
       <div className="member-info absolute inset-x-4 bottom-4 rounded-lg bg-white px-4 py-2">
         <Heading as={5}>{memberData.name}</Heading>
-        <Paragraph className="m-0 pt-1">{memberData.role}</Paragraph>
+        <Paragraph className="pt-1">{memberData.role}</Paragraph>
       </div>
     </div>
   );
