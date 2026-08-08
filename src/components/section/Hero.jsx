@@ -31,8 +31,8 @@ const Hero = () => {
             <Image
               src="/images/foreground/hero.png"
               alt="image"
-              width={600}
-              height={600}
+              width={900}
+              height={900}
               className="w-full h-auto object-cover"
             />
           </div>

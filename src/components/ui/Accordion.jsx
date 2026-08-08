@@ -1,54 +1,33 @@
 "use client";
 
-import { useState } from "react";
 import { cn } from "./cn";
 
-function AccordionItem({ title, children, className }) {
-  const [open, setOpen] = useState(false);
+const Accordion = ({ accordionData, currentOpenItem, toggleAccordion }) => {
+  const isOpen = currentOpenItem === accordionData.id;
 
   return (
-    <div className={cn("border-b border-border", className)}>
-      <button
-        type="button"
-        onClick={() => setOpen((prev) => !prev)}
-        className="flex w-full items-center gap-4 py-4 text-left font-body font-semibold text-dark transition-colors duration-200 hover:text-primary"
+    <div className="overflow-hidden">
+      <div
+        onClick={() => toggleAccordion(accordionData.id)}
+        className="flex items-center cursor-pointer gap-4 p-4 font-medium"
       >
-        <span
-          className={cn(
-            "transition-transform duration-200",
-            open && "rotate-180",
-          )}
-        >
-          ▾
+        <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-b from-primary to-highlight text-white">
+          <i
+            className={cn(isOpen ? "fa-solid fa-minus" : "fa-solid fa-plus")}
+          />
         </span>
-        <span>{title}</span>
-      </button>
+        {accordionData.question}
+      </div>
       <div
         className={cn(
-          "overflow-hidden transition-all duration-300",
-          open ? "max-h-96 pb-4" : "max-h-0",
+          "max-h-0 overflow-hidden p-0 transition-all duration-300 ease-in-out",
+          isOpen && "max-h-[500px] p-4 py-1",
         )}
       >
-        <div className="font-body text-sm text-light">{children}</div>
+        {accordionData.answer}
       </div>
     </div>
   );
-}
+};
 
-export default function Accordion({ items = [], className, ...props }) {
-  return (
-    <div
-      className={cn(
-        "divide-y divide-border rounded-lg border border-border",
-        className,
-      )}
-      {...props}
-    >
-      {items.map((item, index) => (
-        <AccordionItem key={index} title={item.title}>
-          {item.content}
-        </AccordionItem>
-      ))}
-    </div>
-  );
-}
+export default Accordion;

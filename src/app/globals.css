@@ -35,9 +35,6 @@
   --animate-ripple: ripple 2s infinite;
 }
 
-/* ============================================================
-   4. CSS Variables (runtime, non-Tailwind)
-   ============================================================ */
 :root {
   --body-font: "Cabin", sans-serif;
   --heading-font: "Quicksand", serif;
@@ -53,48 +50,10 @@
   --heading-5: 1.25rem;
 }
 
-@media (min-width: 576px) {
-  :root {
-    --heading-1: 2rem;
-    --heading-2: 1.75rem;
-    --heading-3: 1.5rem;
-    --heading-4: 1.375rem;
-  }
-}
 
-@media (min-width: 768px) {
-  :root {
-    --heading-1: 2.25rem;
-    --heading-2: 2rem;
-    --heading-3: 1.75rem;
-    --heading-4: 1.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  :root {
-    --heading-1: 3rem;
-    --heading-2: 2.25rem;
-    --heading-3: 2rem;
-    --heading-4: 1.75rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  :root {
-    --heading-2: 2.5rem;
-    --heading-3: 2.25rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  :root {
-    --heading-1: 3rem;
-    --heading-2: 2.75rem;
-    --heading-3: 2.5rem;
-    --heading-4: 2.25rem;
-  }
-}
+/* ============================================================
+   4. CSS Variables (runtime, non-Tailwind)
+   ============================================================ */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -122,7 +81,9 @@ video {
   max-width: 100%;
   display: block;
 }
-
+button{
+  cursor: pointer;
+}
 /* ============================================================
    6. Global Animations
    ============================================================ */
@@ -181,5 +142,49 @@ video {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+@media (min-width: 576px) {
+  :root {
+    --heading-1: 2rem;
+    --heading-2: 1.75rem;
+    --heading-3: 1.5rem;
+    --heading-4: 1.375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  :root {
+    --heading-1: 2.25rem;
+    --heading-2: 2rem;
+    --heading-3: 1.75rem;
+    --heading-4: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  :root {
+    --heading-1: 3rem;
+    --heading-2: 2.25rem;
+    --heading-3: 2rem;
+    --heading-4: 1.75rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --heading-2: 2.5rem;
+    --heading-3: 2.25rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --heading-1: 3rem;
+    --heading-2: 2.75rem;
+    --heading-3: 2.5rem;
+    --heading-4: 2.25rem;
   }
 }

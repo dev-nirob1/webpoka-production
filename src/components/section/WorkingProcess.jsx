@@ -38,7 +38,7 @@ const WorkingProcess = () => {
     <Section className="overflow-hidden">
       <Container>
         <SectionTitle
-          className="mb-12 text-center"
+          className="text-center items-center mb-10"
           subTitle="Our Process"
           title="Our Process to Success"
         />

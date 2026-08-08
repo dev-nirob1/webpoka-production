@@ -1,12 +1,17 @@
 import { Heading } from ".";
+import { cn } from "./cn";
 
-const SectionTitle = ({ title, subTitle }) => {
+const SectionTitle = ({ title, subTitle, className }) => {
   return (
-    <div className="">
+    <div className={cn("flex flex-col items-start", className)}>
       <Heading as={5} className="text-primary">
         {subTitle}
       </Heading>
-      <span className="relative inline-block ml-5 h-1.25 w-2.5 bg-primary before:absolute before:top-px before:-left-4.5 before:h-0.5 before:w-2.5 before:bg-accent before:content-[''] after:absolute after:top-px after:-right-4.5 after:h-0.5 after:w-2.5 after:bg-accent after:content-['']" />
+      <div className="flex items-center gap-2 my-3">
+        <span className="h-0.5 w-2.5 bg-accent" />
+        <span className="h-1.25 w-2.5 bg-primary" />
+        <span className="h-0.5 w-2.5 bg-accent" />
+      </div>
       <Heading as={3}>{title}</Heading>
     </div>
   );

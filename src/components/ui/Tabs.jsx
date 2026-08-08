@@ -1,38 +1,25 @@
 "use client";
 
-import { useState } from "react";
 import { cn } from "./cn";
 
-export default function Tabs({ tabs = [], className, ...props }) {
-  const [active, setActive] = useState(0);
-
+const Tabs = ({ options, value, onChange, className }) => {
   return (
-    <div className={cn("w-full", className)} {...props}>
-      {/* Tab Bar */}
-      <div className="flex border-b border-border">
-        {tabs.map((tab, index) => (
+    <ul className={cn("mx-auto my-12 flex w-fit flex-wrap gap-2 rounded-full bg-primary p-1", className)}>
+      {options.map((option) => (
+        <li key={option.value}>
           <button
-            key={index}
-            type="button"
-            onClick={() => setActive(index)}
+            onClick={() => onChange(option.value)}
             className={cn(
-              "font-body text-sm font-medium px-5 py-3",
-              "transition-colors duration-200",
-              "border-b-2 -mb-px",
-              active === index
-                ? "border-primary text-primary"
-                : "border-transparent text-light hover:text-dark"
+              "font-bold rounded-full px-10 py-2 text-lg text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-dark",
+              value === option.value && "bg-white text-dark"
             )}
           >
-            {tab.label}
+            {option.label}
           </button>
-        ))}
-      </div>
-
-      {/* Tab Content */}
-      <div className="pt-5">
-        {tabs[active]?.content}
-      </div>
-    </div>
+        </li>
+      ))}
+    </ul>
   );
-}
+};
+
+export default Tabs;
