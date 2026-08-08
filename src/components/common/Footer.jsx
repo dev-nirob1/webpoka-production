@@ -119,8 +119,8 @@ const Footer = () => {
                 <Image
                   src={img.image}
                   alt="gallery image"
-                  height={70}
-                  width={70}
+                  height={300}
+                  width={300}
                   className="h-17.5 w-full object-cover"
                 />
               </div>
