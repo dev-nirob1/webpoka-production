@@ -94,7 +94,7 @@ const ServiceDetails = () => {
       <Container>
         <SectionTitle
           className="mb-12 items-center text-center"
-          title="Our Services"
+          title="Comprehensive Digital Solutions"
           subTitle="What We Offer"
         />
 
