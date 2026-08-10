@@ -9,6 +9,7 @@ const AboutPage = () => {
             <PageHero routeName="About" title="About Us" image="/images/background/about-breadcrumb.avif" />
             <About />
             <Founder/>
+            <About />
             <OurTeam/>
         </div>
     );
