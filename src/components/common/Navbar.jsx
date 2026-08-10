@@ -37,7 +37,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/">
             <Image
-              height={70}
+              height={270}
               width={270}
               src="/images/logo-white.png"
               alt="logo"
@@ -53,7 +53,7 @@ const Navbar = () => {
             <li className="lg:hidden">
               <Image
                 src="/images/logo-white.png"
-                height={60}
+                height={260}
                 width={240}
                 alt="logo"
                 className="h-15 w-auto"

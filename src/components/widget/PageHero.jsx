@@ -13,8 +13,9 @@ const PageHero = ({ routeName, title, image }) => {
       <Image
         src={image}
         alt="breadcrumb background"
-        fill
-        className="z-0 object-cover"
+       fill 
+       sizes="100vw"
+        className="z-0 h-full w-screen object-cover"
       />
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-secondary/15 to-secondary/25" />
 

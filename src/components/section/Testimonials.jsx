@@ -21,7 +21,7 @@ const reviews = [
       "Very friendly and professional contact. I am exited how the website will look like. I let you know.",
     userName: "andreoehsen",
     country: "Germany",
-    image: "https://ui-avatars.com/api/?name=andre&background=0D8ABC&color=fff",
+    image: "/images/team/al-hasan-nirob.jpg",
     rating: 5,
   },
   {
@@ -30,8 +30,7 @@ const reviews = [
       "The seller communicates and takes direction well. He his good and has good knowledgeable. Good value for money. I will work with him again. Happiness 😀",
     userName: "omshreembrzee",
     country: "United Kingdom",
-    image:
-      "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/profile/photos/43922613/original/_MG_8549_1.jpg",
+    image: "/images/team/al-hasan-nirob.jpg",
     rating: 5,
   },
   {
