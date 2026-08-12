@@ -8,7 +8,7 @@ const ProjectCard = ({ app }) => {
         style={{ backgroundImage: `url(${app.image})` }}
         className="h-[260px] w-full rounded-t-lg bg-cover bg-top bg-no-repeat transition-all duration-1500 ease-in-out hover:bg-bottom"
       />
-      <div className="p-4">
+      <div className="p-4 pb-6">
         <Heading as={5} className="mt-2">
           {app.title}
         </Heading>

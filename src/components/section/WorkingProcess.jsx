@@ -68,7 +68,7 @@ const WorkingProcess = () => {
                     alt="image"
                     width={260}
                     height={260}
-                    className="max-w-[240px] lg:max-w-[200px] xl:max-w-[260px]"
+                    className="h-auto max-w-[240px] lg:max-w-[200px] xl:max-w-[260px]"
                   />
                 </div>
 

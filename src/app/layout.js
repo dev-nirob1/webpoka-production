@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      scroll-behavior="smooth"
       className={`${cabin.variable} ${quicksand.variable} h-full antialiased`}
     >
       <body>{children}</body>

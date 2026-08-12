@@ -79,7 +79,7 @@ const ProjectsPage = () => {
 
   return (
     <div>
-      <PageHero title="Our Portfolio" routeName="Projects" image="/images/background/project-breadcrumb.avif" />
+      <PageHero title="Our Portfolio" routeName="Projects" image="/images/background/project-breadcrumb.png" />
 
       <Section>
         <Container>
