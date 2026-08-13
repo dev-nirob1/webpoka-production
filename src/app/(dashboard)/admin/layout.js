@@ -7,11 +7,11 @@ import Topbar from "@/components/dashboard/Topbar";
 const AdminLayout = ({ children }) => {
   return (
     <SidebarProvider>
-    <div className="min-h-screen bg-light/30">
+    <div className="min-h-screen">
       <Sidebar />
       <div className="lg:ml-64">
         <Topbar />
-        <main className="p-6">{children}</main>
+        <main className="p-8">{children}</main>
       </div>
     </div>
     </SidebarProvider>
